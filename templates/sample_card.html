@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Карточка набора</title>
+</head>
+<body>
+    {% if text_error %}
+        <h1>Набор не найден</h1>
+        <p>{{ text_error }}</p>
+    {% else %}
+        <h1>Набор {{ serial_number }}</h1>
+        <p>Имя клиента: {{ client_name }}</p>
+        <p>Статус: {{ status }}</p>
+    {% endif %}
+
+    <a href="/samples">К списку наборов</a>
+</body>
+</html>
